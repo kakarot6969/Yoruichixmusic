@@ -15,6 +15,7 @@ MEDIA = {
     "gay": "https://graph.org/file/850290f1f974c5421ce54.mp4",
     "lesbian": "https://graph.org/file/ff258085cf31f5385db8a.mp4",
     "boob": "https://i.gifer.com/8ZUg.gif",
+    "Brother": "https://files.catbox.moe/3121ms.jpg",
     "cock": "https://telegra.ph/file/423414459345bf18310f5.gif",
 }
 
@@ -26,6 +27,7 @@ TEMPLATES = {
     "gay": "🍷 {mention} ɪꜱ {percent}% ɢᴀʏ!",
     "lesbian": "💜 {mention} ɪꜱ {percent}% ʟᴇꜱʙɪᴀɴ!",
     "boob": "🍒 {mention}ꜱ ʙᴏᴏʙ ꜱɪᴢᴇ ɪꜱ {percent}!",
+    "Brother": "🤝 {mention} ɪꜱ {percent}% Lᴏʏᴀʟ Tᴏ Yᴏᴜ!!",
     "cock": "🍆 {mention} ᴄᴏᴄᴋ ꜱɪᴢᴇ ɪꜱ {percent}ᴄᴍ!",
 }
 
