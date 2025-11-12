@@ -60,5 +60,5 @@ async def handle_percentage_command(_, message: Message):
     )
 
 
-for cmd in ["cutie", "horny", "hot", "sexy", "gay", "lesbian", "boob", "cock"]:
+for cmd in ["cutie", "horny", "hot", "sexy", "gay", "lesbian", "boob", "Brother", "cock"]:
     app.on_message(filters.command(cmd))(handle_percentage_command)
