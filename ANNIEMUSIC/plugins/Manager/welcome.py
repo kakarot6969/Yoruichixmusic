@@ -39,7 +39,7 @@ def _cooldown_minutes(burst: int, threshold: int = JOIN_THRESHOLD, base: int = C
     return min(60, base + extra * 2)
 
 
-def _circle(im, size=(835, 839)):
+def _circle(im, size=(300, 300)):
     im = im.resize(size, Image.LANCZOS).convert("RGBA")
     mask = Image.new("L", size, 0)
     ImageDraw.Draw(mask).ellipse((0, 0, *size), fill=255)
@@ -47,19 +47,18 @@ def _circle(im, size=(835, 839)):
     return im
 
 
-def build_pic(av, fn, uid, un):
+def  build_pic(av, fn, uid, un):
     bg = Image.open(BG_PATH).convert("RGBA")
     avatar = _circle(Image.open(av))
-    bg.paste(avatar, (1887, 390), avatar)
+    bg.paste(avatar, (180, 200), avatar)
     draw = ImageDraw.Draw(bg)
     font = ImageFont.truetype(FONT_PATH, 65)
-    draw.text((421, 715), fn, fill=(242, 242, 242), font=font)
-    draw.text((270, 1005), str(uid), fill=(242, 242, 242), font=font)
-    draw.text((570, 1308), un, fill=(242, 242, 242), font=font)
+    draw.text((760, 420), fn, fill=(242, 242, 242), font=font)
+    draw.text((760, 530), un, fill=(242, 242, 242), font=font)
+    draw.text((760, 640), str(uid), fill=(242, 242, 242), font=font)
     path = f"downloads/welcome_{uid}.png"
     bg.save(path)
     return path
-
 
 @app.on_message(filters.command("welcome") & filters.group)
 async def toggle(client, m: Message):
